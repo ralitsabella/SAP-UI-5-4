@@ -1,0 +1,98 @@
+<mvc:View controllerName="kpmg.home.crud_demo.controller.crud_demo" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page title="CRUD Operations">
+					<content>
+						<VBox xmlns="sap.m" id="vboxid" alignItems="Center">
+							<items>
+								<HBox xmlns="sap.m">
+									<items>
+										<VBox xmlns="sap.m">
+											<items>
+												<Button xmlns="sap.m" id="cbtn" press="oDataCall" text="Create"></Button>
+											</items>
+										</VBox>
+										<VBox xmlns="sap.m">
+											<items>
+												<Button xmlns="sap.m" id="rbtn" press="oDataCall" text="Read"></Button>
+											</items>
+										</VBox>
+										<VBox xmlns="sap.m">
+											<items>
+												<Button xmlns="sap.m" id="ubtn" press="oDataCall" text="Update"></Button>
+											</items>
+										</VBox>
+										<VBox xmlns="sap.m">
+											<items>
+												<Button xmlns="sap.m" id="dbtn" press="oDataCall" text="Delete"></Button>
+											</items>
+										</VBox>
+									</items>
+								</HBox>
+								<HBox xmlns="sap.m" alignItems="Center">
+									<items>
+										<VBox xmlns="sap.m">
+											<Label text="ID"/>
+											<Input xmlns="sap.m" id="uniqueid" placeholder="ID" value="1"></Input>
+										</VBox>
+										<VBox xmlns="sap.m">
+											<Label text="Name"/>
+											<Input xmlns="sap.m" id="nameid" placeholder="Name" value="ralitsa"></Input>
+										</VBox>
+										<VBox xmlns="sap.m">
+											<Label text="Email"/>
+											<Input xmlns="sap.m" id="emailid" placeholder="Email" value="rp@gmail.com"></Input>
+										</VBox>
+										<VBox xmlns="sap.m">
+											<Label text="Mobile"/>
+											<Input xmlns="sap.m" id="mobid" placeholder="Mobile" value="021525"></Input>
+										</VBox>
+									</items>
+								</HBox>
+								<HBox xmlns="sap.m">
+									<items>
+										<VBox xmlns="sap.m">
+											<Table xmlns="sap.m" id="userdatatable" headerText="User Data" items="{ path: 'usersModel>/userdataSet'}">
+												<columns>
+													<Column width="12em">
+														<Text text="Id"/>
+													</Column>
+													<Column width="12em">
+														<Text text="Name"/>
+													</Column>
+													<Column width="12em">
+														<Text text="Email"/>
+													</Column>
+													<Column width="12em">
+														<Text text="Mobile"/>
+													</Column>
+												</columns>
+												<items>
+													<ColumnListItem>
+														<cells>
+															<ObjectIdentifier title="{usersModel>Id}"/>
+														</cells>
+														<cells>
+															<ObjectIdentifier title="{usersModel>Name}"/>
+														</cells>
+														<cells>
+															<ObjectIdentifier title="{usersModel>Email}"/>
+														</cells>
+														<cells>
+															<ObjectIdentifier title="{usersModel>Mobile}"/>
+														</cells>
+													</ColumnListItem>
+												</items>
+											</Table>
+										</VBox>
+									</items>
+								</HBox>
+							</items>
+						</VBox>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
